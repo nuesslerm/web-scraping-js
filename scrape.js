@@ -9,7 +9,13 @@ async function scrapeProduct(url) {
   const src = await el.getProperty('src');
   const srcTxt = await src.jsonValue();
 
-  console.log(srcTxt);
+  const [el2] = await page.$('#productTitle');
+  const txt = await el2.getProperty('textContent');
+  const rawTxt = await txt.jsonValue();
+
+  console.log(srcTxt, rawTxt);
+
+  browser.close();
 }
 
 scrapeProduct(
