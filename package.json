@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "nuesslerm <markus@choco.com>",
   "license": "MIT",
+  "scripts": {
+    "scrape": "node scrape.js"
+  },
   "dependencies": {
     "puppeteer": "^5.2.0"
   }
